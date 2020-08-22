@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: maximo
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: maximo
+  template:
+    metadata:
+      labels:
+        app: maximo
+    spec:
+      nodeSelector:
+        "beta.kubernetes.io/os": linux
+      containers:
+      - name: maximo
+        image: roshdevau/maximoui:7610
+        ports:
+        - containerPort: 9080
+          name: maximo
