@@ -4,7 +4,7 @@
 #       Script : maximoUserInstall.sh                                                               #
 #       Author : roshdevau                                                                           #
 #       Description : Script to install the IBM Maximo as a non-root user                            #
-#       Usage : ./maximoUserInstall.sh DB_PASSWORD DB_SERVER MAXIMO_INSTALL_URL                      #
+#       Usage : ./maximoUserInstall.sh DB_PASSWORD DB_SERVER                     #
 #       Change History :                                                                             #
 #       Date            Author              Version     Description                                  #
 #       20 August 2020  roshdevau            0.1        Original Version                             #
@@ -38,7 +38,7 @@ cd /apps/Launchpad
 
 # Check for file existence else download
 if [[ ! -f MAM_7.6.1.0_LINUX64.tar.gz ]]; then
-	wget http://fujitsu-eam-fileshare.s3.amazonaws.com/761Installers/Linux/MAM_7.6.1.0_LINUX64.tar.gz
+	wget <URL to fetch Maximo gzip file>
 fi
 
 tar xvzf MAM_7.6.1.0_LINUX64.tar.gz
