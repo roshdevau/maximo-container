@@ -1,0 +1,10 @@
+version: '3.6'
+services:
+  maximo761ui:
+    hostname: maximo761ui
+    ports:
+      - 80:9080
+    image: roshdevau/maximoui:7610
+  maximo761cron:
+    hostname: maximo761cron
+    image: roshdevau/maximocron:7610
